@@ -1,9 +1,8 @@
 # 404moodlenotfound
 
-Pra rodar o app:
+## Como rodar
 
-No diretório do server rode: npm run dev OU npm run prod
+Primeiro, garanta que o seu computador pode executar o script `exec_shell_docker.sh`. Então, execute-o:
+- `./exec_shell_docker.sh`
 
-No diretório do client rode: npm start
-
-RODA O SERVER PRIMEIROOO!!!
+Isso vai criar um container docker, rodá-lo e então entrar no container com uma shell. As portas 5000 (server) e 3000 (client) estarão expostas para comunicacao com a aplicacao
