@@ -6,7 +6,7 @@ function App() {
   const [backendData, setBackendData] = useState([{}]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/", { method: "POST", headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ title: "Mensagem de teste", messageBody: "HEHE XD" }) }).then(
+    fetch("/api/", { method: "POST", headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ title: "Mensagem de teste", messageBody: "HEHE XD" }) }).then(
       response => response.json()
     ).then(
       data => {
