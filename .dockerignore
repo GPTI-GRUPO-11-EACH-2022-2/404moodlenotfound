@@ -1,3 +1,5 @@
 # Ignore dependencies
 package-lock.json
 node-modules/
+# Ignore built files
+server/dist/
