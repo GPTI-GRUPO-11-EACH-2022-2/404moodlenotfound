@@ -4,7 +4,7 @@
        "postinstall-client": "cd client && npm install",
        "postinstall-server": "cd server && npm install && npm run build"
     },
-    "engines": {
-        "node": "18.x"
+    "engines" : {
+       "node" : "18.x"
     }
 }
