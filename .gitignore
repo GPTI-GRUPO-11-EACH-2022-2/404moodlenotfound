@@ -1,3 +1,4 @@
 *~
 *.swp
 server/dist/**
+**/node_modules
