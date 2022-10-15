@@ -16,6 +16,8 @@ RUN cd /miglia/server && npm install
 
 RUN cd /miglia/client && npm install 
 
+ENV REACT_APP_PROXY_URL="http://localhost:5000" 
+
 EXPOSE 80
 EXPOSE 5000
 ENTRYPOINT ["entrypoint.sh"]
