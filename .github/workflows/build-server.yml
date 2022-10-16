@@ -22,12 +22,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-  
+
       - name: Install server dependencies
         run: cd server && npm install
 
       - name: Build TypeScript
-        run: npm run build
+        run: echo $PWD && npm run build
 
       - name: Run Tests
         run: npm test
