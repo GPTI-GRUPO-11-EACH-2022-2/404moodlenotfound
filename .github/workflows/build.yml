@@ -11,7 +11,7 @@ on:
       - develop 
 
 jobs:
-  build:
+  build-server:
     name: Build and Test Server
     runs-on: ubuntu-latest
     steps:
@@ -32,17 +32,18 @@ jobs:
       - name: Run Tests
         run: npm test
 
+  build-client:
     name: Build and Test Client
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-  
+
       - name: Set up Node
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-  
+
       - name: Install server dependencies
         run: cd client && npm install
 
