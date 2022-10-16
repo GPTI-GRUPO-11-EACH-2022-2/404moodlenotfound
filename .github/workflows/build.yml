@@ -34,3 +34,24 @@ jobs:
 
       - name: Run Tests
         run: npm test
+
+  build-client:
+    name: Build and Test Client
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install server dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test -- --watchAll
